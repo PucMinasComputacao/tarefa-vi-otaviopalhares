@@ -16,7 +16,7 @@ No trabalho dessa semana vamos alterar o projeto para que a responsividade da ho
 
 ## Print da versão responsiva com Bootstrap [DESKTOP]
 
-![alt text](url-da-imagem)
+![alt text](https://github.com/PucMinasComputacao/tarefa-vi-otaviopalhares/blob/main/bootstrap_desktop.png)
 
 ## Print da versão responsiva com Bootstrap [MOBILE] (*)
 
