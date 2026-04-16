@@ -20,7 +20,7 @@ No trabalho dessa semana vamos alterar o projeto para que a responsividade da ho
 
 ## Print da versão responsiva com Bootstrap [MOBILE] (*)
 
-![alt text](url-da-imagem)
+![alt text](https://github.com/PucMinasComputacao/tarefa-vi-otaviopalhares/blob/main/bootstrap_mobile.png)
 
 
 (*) Utilize as ferramentas do desenvolvedor do seu navegador para colocar no modo reponsivo, escolha um celular qualquer e recarregue a página antes de tirar o print. 
