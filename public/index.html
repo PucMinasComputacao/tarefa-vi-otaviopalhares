@@ -2,237 +2,136 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Cidade de Igarapé</title>
-  <style>
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidade de Igarapé - Bootstrap</title>
 
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    /* HEADER - FLEXBOX */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      background-color: #2c3e50;
-      color: white;
-      padding: 15px 20px;
-    }
-
-    nav {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* BANNER */
-    .banner {
-      width: 100%;
-      height: 350px;
-      background-image: url('https://portalagita.com.br/wp-content/uploads/2023/04/Centro-de-Igarape-e1680753257613.jpeg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* MAIN */
-    main {
-      padding: 30px;
-      text-align: center;
-    }
-
-    /* SECTION - GRID */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .card {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-      background-color: white;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card h3 {
-      margin: 10px;
-    }
-
-    .card p {
-      padding: 0 10px 15px;
-    }
-
-    /* FOOTER */
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    footer a {
-      color: #1abc9c;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    /* ========================= */
-    /* MEDIA QUERIES (RESPONSIVO) */
-    /* ========================= */
-
-    /* TABLET */
-    @media (max-width: 1024px) {
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .banner {
-        height: 250px;
-      }
-    }
-
-    /* CELULAR */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav {
-        justify-content: center;
-        margin-top: 10px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      main {
-        padding: 20px;
-      }
-
-      .banner {
-        height: 200px;
-      }
-    }
-
-    /* TELAS MUITO GRANDES */
-    @media (min-width: 1400px) {
-      .cards {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      main {
-        max-width: 1200px;
-        margin: auto;
-      }
-    }
-
-  </style>
+  <!-- Bootstrap via CDN (obrigatório no exercício) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Cidade de Igarapé</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#turismo">Turismo</a>
-      <a href="#restaurantes">Restaurantes</a>
-      <a href="#cultura">Cultura</a>
-      <a href="#historia">História</a>
-    </nav>
-  </header>
+  <!-- Uso da classe bg-dark do Bootstrap no lugar de CSS customizado -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Cidade de Igarapé</a>
 
-  <!-- MAIN -->
-  <div class="banner"></div>
+      <!-- controla responsividade da navbar (sem media query manual) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <main id="home">
-    <h1>Bem-vindo a Igarapé</h1>
-    <p>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- ms-auto substitui alinhamento manual com flexbox -->
+        <ul class="navbar-nav ms-auto text-uppercase">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#turismo">Turismo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#restaurantes">Restaurantes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cultura">Cultura</a></li>
+          <li class="nav-item"><a class="nav-link" href="#historia">História</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner sem media query -->
+  <div class="w-100" 
+       style="height: 350px; background: url('https://portalagita.com.br/wp-content/uploads/2023/04/Centro-de-Igarape-e1680753257613.jpeg') center/cover no-repeat;">
+  </div>
+
+  <!-- espaçamento com classes (my-5, text-center) -->
+  <main class="container my-5 text-center" id="home">
+    <h1 class="display-4">Bem-vindo a Igarapé</h1>
+
+    <!-- w-75 substitui max-width manual -->
+    <p class="lead mx-auto w-75">
       Igarapé é uma cidade encantadora de Minas Gerais, conhecida por suas paisagens naturais,
-      tranquilidade e hospitalidade. Neste site, você encontrará informações sobre os principais
-      pontos turísticos, restaurantes e um pouco da rica história da cidade.
+      tranquilidade e hospitalidade.
     </p>
   </main>
 
-  <!-- SECTION -->
-  <section class="cards">
+  <!-- Substitui grid/flexbox manual -->
+  <section class="container mb-5">
+    <div class="row g-4">
 
-    <div class="card" id="turismo">
-      <img src="https://www.minasgerais.com.br/imagens/atracoes/1506107885pMVQBd5p1n.jpg" alt="Turismo">
-      <h3>Pontos Turísticos</h3>
-      <p>
-        Explore cachoeiras, trilhas e paisagens naturais que fazem de Igarapé um destino perfeito
-        para quem ama natureza e aventura.
-      </p>
+      <!-- col-*: responsividade sem media query -->
+      <!-- col-12 = celular | col-md-6 = tablet | col-lg-4 = desktop | col-xl-3 = telas grandes -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="turismo">
+        
+        <!-- h-100 garante altura igual sem CSS -->
+        <div class="card h-100 shadow-sm">
+
+          <!-- ✅ ALTERAÇÃO: object-fit-cover substitui CSS manual -->
+          <img src="https://www.minasgerais.com.br/imagens/atracoes/1506107885pMVQBd5p1n.jpg" 
+               class="card-img-top object-fit-cover" style="height:180px;">
+
+          <div class="card-body">
+            <h3 class="card-title h5">Pontos Turísticos</h3>
+            <p class="card-text text-muted">
+              Explore cachoeiras e trilhas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mesma estrutura reaproveitando o grid Bootstrap -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="restaurantes">
+        <div class="card h-100 shadow-sm">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/a8/a4/79/ambiente.jpg?w=900&h=-1&s=1" 
+               class="card-img-top object-fit-cover" style="height:180px;">
+          <div class="card-body">
+            <h3 class="card-title h5">Restaurantes</h3>
+            <p class="card-text text-muted">
+              Comida típica mineira.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="cultura">
+        <div class="card h-100 shadow-sm">
+          <img src="https://diocesedivinopolis.org.br/wp-content/uploads/2014/08/Matrizsantoantonioigarape.jpg" 
+               class="card-img-top object-fit-cover" style="height:180px;">
+          <div class="card-body">
+            <h3 class="card-title h5">Cultura</h3>
+            <p class="card-text text-muted">
+              Tradições locais.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="historia">
+        <div class="card h-100 shadow-sm">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSiJaTbCxymwbXav2hIMQO9jgiS7_MASku7w&s" 
+               class="card-img-top object-fit-cover" style="height:180px;">
+          <div class="card-body">
+            <h3 class="card-title h5">História</h3>
+            <p class="card-text text-muted">
+              Origem da cidade.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <div class="card" id="restaurantes">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/a8/a4/79/ambiente.jpg?w=900&h=-1&s=1" alt="Restaurantes">
-      <h3>Restaurantes</h3>
-      <p>
-        Descubra sabores típicos mineiros em restaurantes acolhedores, com comidas caseiras e
-        deliciosas.
-      </p>
-    </div>
-
-    <div class="card" id="cultura">
-      <img src="https://diocesedivinopolis.org.br/wp-content/uploads/2014/08/Matrizsantoantonioigarape.jpg" alt="">
-      <h3>Cultura da Cidade</h3>
-      <p>
-        Veja como a tradição da cidade é acolhedora, como a Igreja Matriz de Santo Antônio.
-      </p>
-    </div>
-
-    <div class="card" id="historia">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSiJaTbCxymwbXav2hIMQO9jgiS7_MASku7w&s" alt="História">
-      <h3>História da Cidade</h3>
-      <p>
-        Conheça a origem de Igarapé, sua evolução ao longo dos anos e sua importância para a região.
-      </p>
-    </div>
-
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Cidade de Igarapé</p>
-    <p>
-      <a href="#">Instagram</a> |
-      <a href="#">Facebook</a> |
-      <a href="#">Contato</a>
-    </p>
+  <!-- ✅ ALTERAÇÃO: footer usando bg-dark ao invés de CSS -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-1">© 2026 Cidade de Igarapé</p>
+
+      <!-- ✅ Bootstrap controla cores e espaçamento -->
+      <div>
+        <a href="#" class="text-info text-decoration-none mx-2">Instagram</a> |
+        <a href="#" class="text-info text-decoration-none mx-2">Facebook</a> |
+        <a href="#" class="text-info text-decoration-none mx-2">Contato</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- ✅ Bootstrap JS (necessário para navbar funcionar) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
