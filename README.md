@@ -11,8 +11,8 @@ No trabalho dessa semana vamos alterar o projeto para que a responsividade da ho
 
 - Nome: Otávio Palhares Meira
 - Matricula: 914846
-- Proposta de projeto escolhida: 
-- Breve descrição sobre seu projeto:
+- Proposta de projeto escolhida: Site WEB sobre uma cidade.
+- Breve descrição sobre seu projeto: Um site WEB com as informações da cidade mineira de Igarapé, onde apresenta sua história, cultura, gastronomia e pontos turísticos.
 
 ## Print da versão responsiva com Bootstrap [DESKTOP]
 
