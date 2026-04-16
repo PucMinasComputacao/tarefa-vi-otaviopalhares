@@ -1,12 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <title>Cidade de Igarapé</title>
+  <style>
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* HEADER - FLEXBOX */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* BANNER */
+    .banner {
+      width: 100%;
+      height: 350px;
+      background-image: url('https://portalagita.com.br/wp-content/uploads/2023/04/Centro-de-Igarape-e1680753257613.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* MAIN */
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* SECTION - GRID */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      background-color: white;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px;
+    }
+
+    .card p {
+      padding: 0 10px 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #1abc9c;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* ========================= */
+    /* MEDIA QUERIES (RESPONSIVO) */
+    /* ========================= */
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .banner {
+        height: 250px;
+      }
+    }
+
+    /* CELULAR */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .banner {
+        height: 200px;
+      }
+    }
+
+    /* TELAS MUITO GRANDES */
+    @media (min-width: 1400px) {
+      .cards {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: auto;
+      }
+    }
+
+  </style>
 </head>
 <body>
-    
+
+  <!-- HEADER -->
+  <header>
+    <h1>Cidade de Igarapé</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#turismo">Turismo</a>
+      <a href="#restaurantes">Restaurantes</a>
+      <a href="#cultura">Cultura</a>
+      <a href="#historia">História</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <div class="banner"></div>
+
+  <main id="home">
+    <h1>Bem-vindo a Igarapé</h1>
+    <p>
+      Igarapé é uma cidade encantadora de Minas Gerais, conhecida por suas paisagens naturais,
+      tranquilidade e hospitalidade. Neste site, você encontrará informações sobre os principais
+      pontos turísticos, restaurantes e um pouco da rica história da cidade.
+    </p>
+  </main>
+
+  <!-- SECTION -->
+  <section class="cards">
+
+    <div class="card" id="turismo">
+      <img src="https://www.minasgerais.com.br/imagens/atracoes/1506107885pMVQBd5p1n.jpg" alt="Turismo">
+      <h3>Pontos Turísticos</h3>
+      <p>
+        Explore cachoeiras, trilhas e paisagens naturais que fazem de Igarapé um destino perfeito
+        para quem ama natureza e aventura.
+      </p>
+    </div>
+
+    <div class="card" id="restaurantes">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/a8/a4/79/ambiente.jpg?w=900&h=-1&s=1" alt="Restaurantes">
+      <h3>Restaurantes</h3>
+      <p>
+        Descubra sabores típicos mineiros em restaurantes acolhedores, com comidas caseiras e
+        deliciosas.
+      </p>
+    </div>
+
+    <div class="card" id="cultura">
+      <img src="https://diocesedivinopolis.org.br/wp-content/uploads/2014/08/Matrizsantoantonioigarape.jpg" alt="">
+      <h3>Cultura da Cidade</h3>
+      <p>
+        Veja como a tradição da cidade é acolhedora, como a Igreja Matriz de Santo Antônio.
+      </p>
+    </div>
+
+    <div class="card" id="historia">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSiJaTbCxymwbXav2hIMQO9jgiS7_MASku7w&s" alt="História">
+      <h3>História da Cidade</h3>
+      <p>
+        Conheça a origem de Igarapé, sua evolução ao longo dos anos e sua importância para a região.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Cidade de Igarapé</p>
+    <p>
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Contato</a>
+    </p>
+  </footer>
+
 </body>
 </html>
